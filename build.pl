@@ -14,7 +14,7 @@ use open ':encoding(utf8)';
 use XML::LibXML;
 
 my $parser = XML::LibXML->new();
-my $greekXML = $parser->parse_file( "StrongsGreekDictionaryXML_1.4/strongsgreek.xml" );
+my $greekXML = $parser->parse_file( "greek/StrongsGreekDictionaryXML_1.4/strongsgreek.xml" );
 
 #require('../../conn.pl') if not defined($dbh);
 
@@ -32,9 +32,9 @@ my $aramaic = 'oar';
 
 
 #First pass over the data to gather all of the segments of information
-open HE, "<:encoding(Latin-1)", "./strongshebrew.dat"
+open HE, "<:encoding(Latin-1)", "./hebrew/strongshebrew.dat"
    or die "Unable to load Hebrew";
-open GR, "<:encoding(utf8)", "./strongsgreek.dat"
+open GR, "<:encoding(utf8)", "./greek/strongsgreek.dat"
    or die "Unable to load Greek";
 
 print "Parsing Hebrew data...";
